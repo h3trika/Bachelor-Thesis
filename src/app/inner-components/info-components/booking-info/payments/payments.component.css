@@ -1,0 +1,46 @@
+.route-container {
+    padding: 15px 15px;
+    width: 90%;
+    margin: auto;
+    background: white;
+    box-shadow: 3px 3px 15px #888888
+}
+
+.route-img {
+    height: 110px;
+    width: 110px;
+    background-size: 110px 110px;
+    display: inline-block;
+    margin-top: 1em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+.credit-card {  
+    background-image: url("./../../../../../assets/images/credit-card.png");
+}
+
+.bank-transfer {  
+    background-image: url("./../../../../../assets/images/bank-transfer.png");
+}
+
+.cash {  
+    background-image: url("./../../../../../assets/images/cash.png");
+}
+
+.route-text {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 230%;
+    font-weight: bold;
+    color: #06038D; 
+    text-align: center;
+}
+
+.route-text-small {
+    font-size: 150%;
+    color: #849494;
+    text-align: center;
+}
+

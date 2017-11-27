@@ -1,0 +1,101 @@
+﻿<nav class="navbar navbar-default header-navbar">
+    <div class="container-navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle header-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <md-icon class="header-toggle-icon md-icon-header">call_merge</md-icon>
+            </button>
+            <a class="navbar-brand" (click)="navigateToRoute('')"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="navbar-elements">
+                        <button class="header-profile-button" md-button [mdMenuTriggerFor]="menu0" [disableRipple]="true" (onMenuOpen)="onMenuOpened(0)">
+                            <span class="header-profile-text">INFORMATION</span>
+                            <md-icon class='md-icon-header'>keyboard_arrow_down</md-icon>
+                        </button>
+                        <md-menu #menu0="mdMenu" [overlapTrigger]="false">
+                            <div class="info-container-header">INFORMATION PRICES & DISCOUNTS</div>
+                            <div class="info-container info-container-first">
+                                <p class="info-label">BOOKING INFORMATION</p>
+                                <p class="info-link" (click)="navigateToRoute('booking-info/how-to-book')">How To Book<p>
+                                <p class="info-link" (click)="navigateToRoute('booking-info/children-and-infants')">Children And Infants<p>
+                                <p class="info-link" (click)="navigateToRoute('booking-info/payments')">Payments<p>  
+                            </div>
+                            <div class="info-container info-container-second">
+                                <p class="info-label">PRICES & DISCOUNTS</p>
+                                <p class="info-link" (click)="navigateToRoute('prices-discounts/refunds-and-compensations')">Refunds And Compensations<p>
+                                <p class="info-link" (click)="navigateToRoute('prices-discounts/billing-guide')">Billing Guide<p>
+                                <p class="info-link" (click)="navigateToRoute('prices-discounts/fares-bundles')">Fares & Bundles<p>   
+                            </div>
+                            <div class="info-container info-container-third">
+                                <p class="info-label">TRAVEL INFORMATION</p>
+                                <p class="info-link" (click)="navigateToRoute('travel-info/baggage')">Baggage<p>
+                                <p class="info-link" (click)="navigateToRoute('travel-info/electronic-devices')">Electronic Devices On Board<p>
+                                <p class="info-link" (click)="navigateToRoute('travel-info/special-assistance')">Special Assistance<p>  
+                            </div>
+                        </md-menu>
+                    </div>
+                    <div class="navbar-separator"></div>
+                </li>      
+                <li *ngIf="!signedIn">
+                    <div class="navbar-elements">
+                        <button class="header-profile-button" md-button [disableRipple]="true" (click)="openLoginDialog()">
+                            <span class="header-profile-text">SIGN IN</span>
+                        </button>                
+                    </div>
+                    <div class="navbar-separator"></div>
+                </li> 
+                 <li *ngIf="signedIn">
+                    <div class="navbar-elements">
+                        <button class="header-profile-button" md-button [disableRipple]="true" (click)="navigateToRoute('profile')">
+                            <span class="header-profile-text">{{name.toUpperCase()}}</span>
+                        </button>                
+                    </div>
+                    <div class="navbar-separator"></div>
+                </li>
+                <li>
+                    <div class="navbar-elements">
+                        <button class="header-profile-button" md-button [mdMenuTriggerFor]="menu1" [disableRipple]="true" (onMenuOpen)="onMenuOpened(1)">
+                            <md-icon class='md-icon-header'>language</md-icon>
+                            <span class="header-profile-text">ENGLISH</span>
+                            <md-icon class='md-icon-header'>keyboard_arrow_down</md-icon>
+                        </button>
+                        <md-menu #menu1="mdMenu" [overlapTrigger]="false">
+                            <div class="flags-width"></div>
+                            <button md-menu-item>
+                                <div class="flag flag-uk"></div>
+                                <p class="header-text flag-text">English</p>
+                            </button>
+                            <button md-menu-item>
+                                <div class="flag flag-italy"></div>
+                                <p class="header-text flag-text">Italian</p>
+                            </button>
+                            <button md-menu-item>
+                                <div class="flag flag-spain"></div>
+                                <p class="header-text flag-text">Spanish</p>
+                            </button>
+                            <button md-menu-item>
+                                <div class="flag flag-germany"></div>
+                                <p class="header-text flag-text">Deutsch</p>
+                            </button>
+                            <button md-menu-item>
+                                <div class="flag flag-france"></div>
+                                <p class="header-text flag-text">French</p>
+                            </button>
+                            <button md-menu-item>
+                                <div class="flag flag-bulgaria"></div>
+                                <p class="header-text flag-text">Bulgarian</p>
+                            </button>
+                        </md-menu>
+                    </div>
+                    <div class="navbar-separator" style="visibility: hidden"></div>
+                </li>      
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div style="clear:both"></div>

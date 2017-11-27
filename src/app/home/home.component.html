@@ -1,0 +1,119 @@
+﻿<jqxScrollView
+    [width]="'100%'" [height]="500" [showButtons]="false" [slideShow]="true" [slideDuration]="6000" [animationDuration]="1500">
+    <div><div class="photo" style="background-image: url(./../../assets/images/banner-2.jpg)"></div></div>
+    <div><div class="photo" style="background-image: url(./../../assets/images/banner-3.jpg)"></div></div>
+    <div><div class="photo" style="background-image: url(./../../assets/images/banner-4.jpg)"></div></div>
+    <div><div class="photo" style="background-image: url(./../../assets/images/banner-5.jpg)"></div></div>
+</jqxScrollView>
+
+<div class="error-on-flight-search-container">
+    <div class="error-text-container">
+        <span class="error-sign">Error: </span>
+        <span class="error-text"></span>
+    </div>
+</div>
+
+
+<div class="flight-search-container">
+
+    <md-radio-group class="radio-buttons" (change)="radioButtonsOnChange()">
+        <md-radio-button value="'two-way'" checked="true" class="first-radio-button">Two-Way Trip</md-radio-button>
+        <md-radio-button value="'one-way'">One-Way Trip</md-radio-button>
+    </md-radio-group>
+
+    <form [formGroup]="searchFlightsForm" novalidate class="search-flights-form">
+
+        <div class="form-group">
+            <md-form-field>
+                <input placeholder="Origin" mdInput [mdAutocomplete]="origin" class="form-control" formControlName="origin">
+            </md-form-field>  
+
+            <md-autocomplete #origin="mdAutocomplete">
+                <md-option *ngFor="let option of filteredOriginCities | async" [value]="option">
+                    {{ option }}
+                </md-option>
+            </md-autocomplete>
+        </div>
+        
+        <div class="separator"></div>
+
+        <div class="form-group">
+            <md-form-field>
+                <input placeholder="Destination" mdInput [mdAutocomplete]="destination" class="form-control" formControlName="destination">
+            </md-form-field>  
+
+            <md-autocomplete #destination="mdAutocomplete">
+                <md-option *ngFor="let option of filteredDestinationCities | async" [value]="option">
+                    {{ option }}
+                </md-option>
+            </md-autocomplete>
+        </div>
+      
+        <br />
+
+       
+       <div class="form-group">
+            <md-form-field>
+                <input mdInput [mdDatepicker]="departureDate" placeholder="Departure Date" formControlName="departureDate">
+                <md-datepicker-toggle mdSuffix [for]="departureDate"></md-datepicker-toggle>
+                <md-datepicker #departureDate></md-datepicker>
+            </md-form-field>            
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="form-group">
+            <md-form-field>
+                <input mdInput [mdDatepicker]="returnDate" placeholder="Return Date" formControlName="returnDate">
+                <md-datepicker-toggle mdSuffix [for]="returnDate" [disabled]="returnDatePickerDisabled"></md-datepicker-toggle>
+                <md-datepicker #returnDate></md-datepicker>
+            </md-form-field>            
+        </div>
+ 
+
+        <button class="search-icon-container" md-button (click)="searchFlights()">
+            <md-icon class="search-icon">search</md-icon>
+        </button> 
+
+  </form>
+</div>
+
+<div class="extras">
+    <div class="extras-header">
+        <p class="header-text-big">Boundless Air</p>
+        <p class="header-text-small">Book Cheap Flights To Attractive Destinations</p>
+    </div>
+
+    <div class="col-md-4">
+        <div class="extra-container">
+            <div class="extra-img rent-a-car-img" (click)="navigateTo('https://toprentacar.bg')"></div>
+            <div class="extra-text-big">Rent a car</div>
+            <div class="extra-text-small">Do you wish to explore your holiday destination at your own pace?</div>
+            <div class="extra-text-link" (click)="navigateTo('https://toprentacar.bg')">Book your rental car</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="extra-container">
+            <div class="extra-img book-a-hotel-img" (click)="navigateTo('https://www.booking.com')"></div>
+            <div class="extra-text-big">Book a hotel</div>
+            <div class="extra-text-small">Whether luxurious or sporty, we have the right accommodation for you.</div>
+            <div class="extra-text-link" (click)="navigateTo('https://www.booking.com')">Book your hotel</div>
+        </div>
+    </div>
+    <div class="col-md-4 last-extra-container">
+        <div class="extra-container">
+            <div class="extra-img book-a-transfer-img" (click)="navigateTo('https://www.holidaytaxis.com/en')"></div>
+            <div class="extra-text-big">Book a transfer</div>
+            <div class="extra-text-small">Choose from well priced minibuses, private taxis, to luxurious limousines.</div>
+            <div class="extra-text-link" (click)="navigateTo('https://www.holidaytaxis.com/en')">Book your transfer</div>
+        </div>
+    </div>
+   
+
+</div>
+
+
+
+
+
+         

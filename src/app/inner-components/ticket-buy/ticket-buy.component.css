@@ -1,0 +1,273 @@
+.container-ticket-buy-outer {
+        margin-top: 5em;
+}
+
+.header {
+    color: #06038D;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: p22-underground, sans-serif;
+    font-weight: bold;
+}
+
+.basic-info {
+    width: 100%;
+    background-color: white;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.person-img {
+    height: 80px;
+    width: 80px;
+    background-size: 80px 80px;
+    float: left;
+    background-image: url("./../../../assets/images/16y.png");
+    position: relative;
+    left: 15%;
+    transform: translateX(-15%);  
+    top: 12px;
+}
+
+.name-inputs-container {
+    display: inline-block;
+    position: relative;
+    left: 40px;
+}
+
+.mat-form-field {
+    width: 250px;
+}
+
+.form-group {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+:host ::ng-deep .mat-input-placeholder {
+    font-weight: bold;
+    font-size: 150%; 
+}
+
+:host ::ng-deep .mat-input-element {
+    font-size: 180%; 
+}
+
+.gender-container-outer {
+    display: inline-block;
+    position: relative;
+    top: 21px;
+    left: 60px;
+}
+
+.gender-container {  
+    height: 62px;
+    width: 90px;
+    float: left;
+    border: 2px solid #919191;  
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+    color: #06038d;
+}
+
+.gender-container-female {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border-right-color: #c6007e;
+}
+
+.gender-container-male {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;  
+    border-left: 0px;
+}
+
+.gender-text {
+    position: relative;
+    top: 19px;
+}
+
+.middle-bar {
+    height: 50px;
+    background-color: #e5e5e5;
+}
+
+.icon-plane {
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.middle-bar-text {
+    text-transform: uppercase;
+    position: relative;
+    top: 13px;
+    right: 17px;
+    color: #06038d;
+    font-size: 220%;
+    font-weight: bold;
+    font-family: p22-underground, sans-serif;
+}
+
+.baggage-container {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    height: 330px;
+}
+
+.baggage-header {
+    font-size: 13px;
+    font-weight: 700;
+    color: #343434;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.baggage {
+    width: 32%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.no-baggage {  
+    width: 105px;
+}
+.normal-baggage {
+    width: 110px;
+}
+.big-baggage {
+    width: 115px;
+}
+
+.normal-baggage-selected, .big-baggage-selected, .small-baggage-unselected, .large-baggage-selected,
+.normal-baggage-selected-two, .big-baggage-selected-two, .small-baggage-unselected-two, .large-baggage-selected-two  {
+    display: none;
+}
+
+.baggage-container-outer {
+    margin-top: 2em;
+}
+
+.baggage-container-icons {  
+    height: 80px;
+    width: 115px;
+    border: 2px solid #919191;  
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
+    color: #06038d;
+}
+
+.baggage-container-none, .baggage-container-none-two {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border-right-color: #c6007e;
+}
+
+.baggage-container-normal, .baggage-container-normal-two { 
+    border-left: 0px;
+    margin-left: -3px;
+}
+
+.baggage-container-big, .baggage-container-big-two {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;  
+    color: #06038d;
+    border-left: 0px;
+    margin-left: -3px;
+}
+
+.baggage-text {
+    position: relative;
+    top: 16px;
+}
+
+.baggage-text-none {
+    top: 26px;
+}
+
+.baggage-text-big {
+    font-size: 140%;
+}
+
+.baggage-bottom-text {
+    margin-top: 1.5em;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #00a1e0;
+}
+
+.cabin-baggage-header {
+    margin-bottom: 13px;
+}
+
+.small-baggage {
+    width: 60px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.big-baggage {
+    width: 115px;
+    margin-bottom: 10px;
+}
+
+.baggage-size {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 300;
+    color: #919191;
+    width: 115px;
+}
+
+.baggage-container-small, .baggage-container-small-two {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.baggage-container-large, .baggage-container-large-two { 
+    color: #06038d;
+    border-left: 0px;
+    margin-left: -3px;
+}
+
+.active {
+     border-color: #c6007e !important;
+     color: #c6007e !important;
+     margin-right: -2px;
+}
+
+.continue-container {
+    text-align: left;
+    background-color: #E5E5E5; 
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.btn-purple {
+    color: white;
+    background-color: #C6007E;
+    border-color: #C6007E;
+    min-width: 150px;
+    height: 44px;
+    display: inline-block;
+}
+
+.error-text {
+    display: inline-block;
+    color: #919191;
+    font-weight: bold;
+    font-size: 120%;
+    margin-left: 20px;
+}
+
+    

@@ -1,0 +1,34 @@
+﻿ <div class="container-fluid container-login-dialog">
+    <div class="login-dialog-header">Sign In</div>
+
+    <form [formGroup]="loginForm" novalidate>
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="Email" class="form-control" formControlName="email">
+            </md-input-container>             
+        </div>
+
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="Password" type="password" class="form-control" formControlName="password">
+            </md-input-container>            
+        </div>
+
+        <div class="wrong-password" *ngIf="wrongPassword">
+            <md-icon class="wrong-password-icon">warning</md-icon>
+            <div style="float: left;">
+                <p class="wrong-password-text-big">Wrong password or e-mail address.</p>
+                <p class="wrong-password-text-small">Please try again!</p>
+            </div>
+        </div>
+
+        <div style="clear: both"></div>
+
+        <p class="forgotten-password" (click)="forgottenPassword()">FORGOT YOUR PASSWORD?</p>
+
+        <button type="button" class="btn btn-purple" [disabled]="!loginForm.valid" (click)="login()">SIGN IN</button> <br/>
+        <button type="button" class="btn btn-blue" (click)="closeLoginDialog()">CANCEL</button>
+
+        <p class="not-registered" (click)="register()">NOT REGISTERED?</p>
+  </form>
+</div>

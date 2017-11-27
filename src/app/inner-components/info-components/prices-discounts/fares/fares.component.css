@@ -1,0 +1,99 @@
+.route-container {
+    padding: 15px 15px;
+    width: 90%;
+    margin: auto;
+    background: white;
+    box-shadow: 3px 3px 15px #888888
+}
+
+.col-md-6 {
+    text-align: center;
+}
+
+.fares-name {
+    width: 200px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-top: 2em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+.go {
+    background-color: #C6007E; 
+}
+
+.plus {
+    background-color: #06038D;
+}
+
+.fares-name-big {
+    font-size: 180%;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.fares-name-small {
+    font-size: 150%;
+    margin-bottom: 0;
+}
+
+.fare-rule {
+    margin-top: 4em;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+}
+
+.route-img {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 20px 20px;
+}
+
+.route-text {
+    margin-left: 0.7em;
+    font-size: 140%;
+    color: #849494; 
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+}
+
+.hand-luggage {  
+    background-image: url("./../../../../../assets/images/hand-luggage.png");
+}
+
+.hand-luggage-2 {  
+    background-image: url("./../../../../../assets/images/hand-luggage-2.png");
+}
+
+.freecheckin1 {  
+    background-image: url("./../../../../../assets/images/freecheckin1.png");
+}
+
+
+.freecheckin2 {  
+    background-image: url("./../../../../../assets/images/freecheckin2.png");
+}
+
+
+.large-luggage {  
+    background-image: url("./../../../../../assets/images/large-luggage.png");
+}
+
+
+.small-luggage {  
+    background-image: url("./../../../../../assets/images/small-luggage.png");
+}
+
+
+.priority {  
+    background-image: url("./../../../../../assets/images/priority.png");
+}
+
+

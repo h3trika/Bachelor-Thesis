@@ -1,0 +1,76 @@
+﻿ <div class="container-fluid container-register-dialog" >
+    <div class="register-dialog-header">Register</div>
+
+    <form [formGroup]="registerForm" novalidate>
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="First name" class="form-control" formControlName="firstname">
+            </md-input-container> 
+            <div *ngIf="errMsgs.firstname.length" class="alert alert-danger">
+                <ul>
+                    <li *ngFor="let error of errMsgs.firstname">
+                        {{error}}
+                    </li>
+                </ul>
+            </div>            
+        </div>
+
+         <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="Last name" class="form-control" formControlName="lastname">
+            </md-input-container> 
+            <div *ngIf="errMsgs.lastname.length" class="alert alert-danger">
+                <ul>
+                    <li *ngFor="let error of errMsgs.lastname">
+                        {{error}}
+                    </li>
+                </ul>
+            </div>             
+        </div>
+
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="E-mail" class="form-control" formControlName="email">
+            </md-input-container>    
+            <div *ngIf="errMsgs.email.length" class="alert alert-danger">
+                <ul>
+                    <li *ngFor="let error of errMsgs.email">
+                        {{error}}
+                    </li>
+                </ul>
+            </div>          
+        </div>
+
+        <div class="form-group">
+            <md-input-container>
+                <input mdInput placeholder="Password" type="password" class="form-control" formControlName="password">
+            </md-input-container>    
+            <div *ngIf="errMsgs.password.length" class="alert alert-danger">
+                <ul>
+                    <li *ngFor="let error of errMsgs.password">
+                        {{error}}
+                    </li>
+                </ul>
+            </div>         
+        </div>
+
+
+        <div class="user-exist" *ngIf="userExist">
+            <md-icon class="user-exist-icon">warning</md-icon>
+            <div style="float: left;">
+                <p class="user-exist-text-big">User Already Exists.</p>
+                <p class="user-exist-text-small">Please try again!</p>
+            </div>
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div class="form-group">
+            <md-checkbox formControlName="terms">I accept the privacy policy</md-checkbox>
+        </div>
+
+        <button type="button" class="btn btn-purple" [disabled]="!registerForm.valid" (click)="register()">REGISTER</button> <br/>
+        <button type="button" class="btn btn-blue" (click)="closeRegisterDialog()">CANCEL</button>
+
+  </form>
+</div>

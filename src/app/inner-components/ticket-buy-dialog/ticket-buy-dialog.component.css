@@ -1,0 +1,192 @@
+.ticket-buy-container {
+    padding: 0 20px;
+    font-family: p22-underground, sans-serif;
+}
+
+.header {
+    text-align: center;
+    color: #06038d;   
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.info-container {
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.info {
+    display: inline-block;
+    color: #C6007E;
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.info-text {
+    display: inline-block;  
+    font-size: 210%;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 0.5em;
+}
+
+.info-lastname {
+    margin-left: 1em;
+}
+
+.price-container {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.price-container-inner {
+    display: inline-block;
+    border: 2px solid #C6007E;  
+    width: 130px;
+    height: 80px;
+}
+
+.price-container-inner-price {
+    border-right: 0;
+    margin-right: -3px;
+    border-top-left-radius: 5px;
+}
+
+.price-container-inner-baggageprice {
+    border-top-right-radius: 5px;
+}
+
+.price-text {
+    font-size: 300%;
+    font-weight: bold;
+    color: #06038d;   
+    margin-bottom: 7px;
+    position: relative;
+    top: 15px;
+}
+
+.price-legend-text {
+    font-size: 170%;
+    font-weight: bold;
+    color: #06038d;   
+}
+
+.total-price-container {
+    margin: auto;
+    text-align: center;
+    border: 2px solid #C6007E;
+    border-top: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 259px;
+    height: 60px;
+    position: relative;
+    bottom: 32px;
+}
+
+.total-price-text {
+    font-size: 300%;
+    font-weight: bold;
+    position: relative;
+    top: 13px;
+    color: #06038d;   
+}
+
+.credit-cards-container {
+    margin-top: 1em;
+}
+
+.card-text {
+    display: inline-block;
+    color: #06038d; 
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    bottom: 10px;
+}
+
+.cards-icons {
+    display: inline-block;
+    margin: auto;
+    height: 30px;
+    width: 60%;
+    background-size: 100% 30px;
+    background-image: url('./../../../assets/images/creditcardicons.png');
+}
+
+.credit-card-info-container {
+    margin-top: 1em;
+}
+
+.card-info-icon {
+    display: inline-block;
+    position: relative;
+    top: 15px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+md-form-field {
+    width: 76%;
+    margin-left: 2em;
+}
+
+:host ::ng-deep .mat-input-element {
+    font-size: 200%;
+}
+
+:host ::ng-deep .mat-input-placeholder {
+    font-size: 220%;
+}
+
+:host ::ng-deep .mat-select-value-text {
+    font-size: 130%;
+}
+
+:host ::ng-deep .mat-select-placeholder {
+    font-size: 105%;
+    font-weight: bold;
+
+}
+
+:host ::ng-deep .mat-select-trigger { 
+    min-width: 50px;
+}
+
+.mount-select-container {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.year-select-container, .card-date-picker, .card-security-code, .card-security-code {
+    display: inline-block;
+}
+
+.lock-icon {
+    top: 10px;
+    margin-left: 1em;
+}
+
+.ccv-input {
+    width: 60%;
+    position: relative;
+    bottom: 6px;
+    margin-left: 1em;
+}
+
+.btn-purple {
+    font-size: 150%;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    background-color: #C6007E;
+    border-color: #C6007E;
+    width: 100%;
+    height: 44px;
+    margin-top: 1em;  
+}

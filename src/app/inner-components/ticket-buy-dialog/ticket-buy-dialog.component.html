@@ -1,0 +1,98 @@
+﻿<div class="ticket-buy-container">
+    <p class="header">Summary</p>
+
+    <div class="info-container">
+        <div>
+            <div class="info">First Name: </div>
+            <div class="info-text">{{firstName}}</div>
+        </div>
+         <div>
+            <div class="info info-lastname">Last Name: </div>
+            <div class="info-text">{{lastName}}</div>
+        </div>       
+    </div>
+
+    <div class="price-container">
+        <div class="price-container-inner price-container-inner-price">
+            <p class="price-text">lv{{price}}</p>
+            <div class="price-legend-text">Flight Price</div>
+        </div>
+        <div class="price-container-inner price-container-inner-baggageprice">
+            <p class="price-text">lv{{baggagePrice}}</p>
+            <div class="price-legend-text">Baggage Price</div>
+        </div>
+    </div>
+
+    <div class="total-price-container">
+        <p class="total-price-text">Total: lv{{price + baggagePrice}}</p>
+    </div>
+
+    <p class="header">Payment options</p>
+
+    <div class="credit-cards-container">
+        <div class="card-text">ACCEPTED CARDS:</div>
+        <div class="cards-icons"></div>
+    </div>
+
+    <div class="credit-card-info-container">
+        <form [formGroup]="ticketBuyDialogForm" novalidate>
+
+            <div class="form-group">
+                <div class="card-info-icon">  
+                    <svg width='33' height='24' viewBox='0 0 33 24' xmlns='http://www.w3.org/2000/svg' fill='#919191'><title>card</title><path d='M28.884.526H3.634C1.775.526.264 2.047.264 3.917v16.218c0 1.87 1.512 3.391 3.37 3.391h25.25c1.859 0 3.37-1.521 3.37-3.391V3.918c0-1.87-1.511-3.392-3.37-3.392zm2.247 19.61a2.256 2.256 0 0 1-2.247 2.261H3.634a2.256 2.256 0 0 1-2.247-2.261V8.628h29.744v11.508zm0-15.851H1.387v-.367a2.256 2.256 0 0 1 2.247-2.261h25.25a2.256 2.256 0 0 1 2.247 2.261v.367zm-8.43 8.122H3.411v1.695h19.29v-1.695zm6.179 0h-4.123v1.695h4.123v-1.695z' fill-rule='evenodd'/></svg>
+                </div>
+                <md-form-field>
+                    <input placeholder="Card number" pattern="[0-9]*" mdInput class="form-control" formControlName="cardNumber">
+                </md-form-field>  
+            </div>
+
+            <div class="form-group">
+                <div class="card-info-icon"> 
+                    <svg width='33' height='24' viewBox='0 0 25 24' xmlns='http://www.w3.org/2000/svg' fill='#919191'><title>person</title><path d='M15.944 17.04c-.592-.096-.606-1.757-.606-1.757s1.741-1.484 2.12-3.848c1.02 0 1.651-2.512.63-3.397C18.131 7.107 19.4.46 12.974.46S7.818 7.108 7.86 8.038c-1.021.884-.39 3.397.63 3.397.379 2.363 2.12 3.848 2.12 3.848s-.014 1.661-.606 1.757c-.88.143-4.568.932-6.622 1.569-1.604.743-2.411 2.959-2.411 4.854h24.007c0-1.985-1.098-4.216-2.572-4.9-2.188-.955-5.545-1.374-6.462-1.523z' fill-rule='evenodd'/></svg>
+                </div>
+                <md-form-field>
+                    <input placeholder="Name on card" pattern="[a-zA-Z ]*" mdInput class="form-control" formControlName="cardName" style="text-transform: uppercase">
+                </md-form-field>  
+            </div>
+
+            <div class="card-security-container">
+                <div class="card-date-picker">               
+                    <div class="card-info-icon">     
+                        <svg width='33' height='24' viewBox='0 0 28 23' xmlns='http://www.w3.org/2000/svg' fill='#919191'><path d='M3.489 13.42h9.002v-1.895H3.489v1.895zM2.357 7.141h20.197v1.277h1.869V2.402c0-1.047-.837-1.895-1.868-1.895H2.357c-1.03 0-1.868.849-1.868 1.895v13.149c0 1.045.838 1.895 1.868 1.895h10.134v-1.895H2.357v-8.41zm0-4.739h20.198l-.001 1.486H2.357V2.402zm18.577 6.871c-3.604 0-6.538 2.976-6.538 6.634 0 3.659 2.934 6.634 6.538 6.634 3.605 0 6.538-2.975 6.538-6.634 0-3.658-2.933-6.634-6.538-6.634zm0 11.373c-2.575 0-4.67-2.126-4.67-4.738 0-2.613 2.095-4.739 4.67-4.739 2.575 0 4.67 2.126 4.67 4.739s-2.095 4.738-4.67 4.738zm.934-8.53H20v4.739h3.736V14.96h-1.868v-2.844z'/></svg>
+                    </div>
+
+                    <div class="mount-select-container">
+                        <md-select placeholder="MM" formControlName="mountSelect">
+                            <md-option *ngFor="let month of cardMounts" [value]="month">
+                                {{ month }}
+                            </md-option>
+                        </md-select>
+                    </div>   
+
+                    <div class="year-select-container">
+                        <md-select placeholder="YY" formControlName="yearSelect">
+                            <md-option *ngFor="let year of cardYears" [value]="year">
+                                {{ year }}
+                            </md-option>
+                        </md-select>
+                    </div>      
+                </div>
+
+                <div class="card-security-code">
+                     <div class="card-info-icon lock-icon">                            
+                        <svg xmlns='http://www.w3.org/2000/svg' width='33' height='24' viewBox='0 0 13 17' fill='#919191'><path d='M11.812 8.5c.295 0 .546.103.753.31s.31.457.31.753v6.375c0 .295-.103.546-.31.753s-.457.31-.753.31H1.188c-.295 0-.546-.103-.753-.31s-.31-.457-.31-.753V9.563c0-.295.103-.546.31-.753s.456-.31.753-.31h.354V4.957c0-1.365.485-2.533 1.455-3.503C3.967.484 5.135-.001 6.5-.001s2.533.485 3.503 1.455 1.455 2.138 1.455 3.503c0 .192-.07.358-.21.498s-.306.21-.498.21h-.708c-.192 0-.358-.07-.498-.21s-.21-.306-.21-.498a2.73 2.73 0 0 0-.83-2.003c-.553-.553-1.222-.83-2.004-.83s-1.45.277-2.003.83a2.73 2.73 0 0 0-.83 2.003V8.5h8.145z'/></svg>
+                    </div>
+                    <md-form-field class="ccv-input">
+                        <input placeholder="CVC2/CVV" mdInput pattern="[0-9]*" class="form-control" formControlName="ccv">
+                    </md-form-field>  
+                </div>
+
+            </div>
+
+            <button type="button" class="btn btn-purple" [disabled]="!ticketBuyDialogForm.valid" (click)="finishBuyingTicket()">CONTINUE</button>
+
+        </form>
+    </div>
+
+
+</div>

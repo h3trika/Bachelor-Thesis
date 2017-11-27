@@ -1,0 +1,97 @@
+﻿<div class="container-profile-outer">
+    <div class="col-md-10">
+        <div class="header">Welcome <span class="header-name">{{lastName}}!</span></div>
+        <div class="sign-out" (click)="signOut()">
+            <div class="sign-out-icon"></div>
+            <div class="sign-out-text">SIGN OUT</div>
+        </div>
+        <div style="margin-top: 3em;">
+            <div class="icon-plane">
+                <svg width='30' height='30' viewBox='0 0 89 91' xmlns='http://www.w3.org/2000/svg'><title>Group</title><g fill='none' fill-rule='evenodd'><path d='M60.634 40.409S31.256 5.413 28.915 2.838C26.574.263 20.956.38 20.956.38l16.386 36.985v2.575l23.292.469zM60.634 50.898S31.256 85.894 28.915 88.469c-2.341 2.575-7.959 2.458-7.959 2.458l16.386-36.985v-2.575l23.292-.469zM17.562 42.047L5.156 28.471H1.059l6.204 15.566 10.299-1.99zM17.562 48.836L5.156 62.413H1.059l6.204-15.567 10.299 1.99z' fill='#1111B7'/><path d='M5.55 51.156l1.264-3.197 9.578 2.184-1.561 1.697-9.281-.684z' fill='#0C0C96'/><path d='M.708 45.793c0-3.476 23.695-6.32 26.335-6.32h46.934c2.639 0 14.981 2.844 14.981 6.32 0 3.476-12.342 6.32-14.981 6.32H27.043c-2.639 0-26.335-2.844-26.335-6.32z' fill='#4141E5'/><path d='M.708 45.793c0-3.476 23.695-6.32 26.335-6.32h46.934c2.639 0 14.981 2.844 14.981 6.32-15.566-3.511-72.332-2.926-88.25 0z' fill='#8484F4'/><path d='M39.822 28.413v-.994c0-1.197.994-1.941 2.698-2.32l3.456-.607h5.281c1.197 0 2.176.979 2.176 2.176v2.32a2.182 2.182 0 0 1-2.176 2.176h-5.092l-3.503-.714c-1.303-.286-2.84-.841-2.84-2.037zM31.685 16.177v-.797c0-.959.797-1.555 2.162-1.859l2.769-.487h4.232a1.75 1.75 0 0 1 1.744 1.743v1.859c0 .959-.785 1.743-1.744 1.743h-4.08l-2.807-.572c-1.044-.227-2.276-.671-2.276-1.63zM39.822 63.304v.994c0 1.197.994 1.941 2.698 2.32l3.456.607h5.281a2.182 2.182 0 0 0 2.176-2.176v-2.32a2.182 2.182 0 0 0-2.176-2.176h-5.092l-3.503.714c-1.303.285-2.84.84-2.84 2.037zM31.685 75.54v.797c0 .959.797 1.555 2.162 1.859l2.769.487h4.232a1.75 1.75 0 0 0 1.744-1.743v-1.859c0-.959-.785-1.743-1.744-1.743h-4.08l-2.807.572c-1.044.226-2.276.671-2.276 1.63z' fill='#0A0A7A'/><path d='M37.339 53.938v-1.814H59.55l-1.527 1.814H37.339z' fill='#0C0C96'/></g></svg>
+            </div>
+            <div class="icon-plane-text">Upcoming trips</div>
+        </div>
+
+        <div class="no-bookings" *ngIf="upcomingTrips.length === 0">You don't have any upcoming bookings</div> 
+
+        <div class="trips" *ngFor="let flight of upcomingTrips">
+            <div class="trips-header row">
+                <div class="col-md-3">
+                    <p class="trips-header-text">CONFIRMATION <br /> NUMBER</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">FROM - TO</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">GOING OUT</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">LAST NAME</p>
+                </div>
+            </div>
+            <div class="trips-table row">
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{flight.confirmNumber}}</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text destination-text">
+                        {{flight.fromDestination}}
+                        <svg width='30' height='10' viewBox='0 0 33 12' xmlns='http://www.w3.org/2000/svg' fill='#06038d'><path d='M32.403 5.709l.005-.008-2.84-4.944a.568.568 0 0 0-.77-.195.548.548 0 0 0-.198.757l2.34 4.11H1.063a.557.557 0 0 0-.562.553c0 .306.252.553.562.553h29.879l-2.343 4.138a.549.549 0 0 0 .199.757.567.567 0 0 0 .77-.196l2.841-4.971a.544.544 0 0 0-.006-.554z' fill-rule='evenodd'/></svg>
+                        {{flight.toDestination}}
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{flight.takingOff}}</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{lastName.toUpperCase()}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3em;">
+            <div class="icon-plane">
+                <svg width='30' height='30' viewBox='0 0 89 91' xmlns='http://www.w3.org/2000/svg'><title>Group</title><g fill='none' fill-rule='evenodd'><path d='M60.634 40.409S31.256 5.413 28.915 2.838C26.574.263 20.956.38 20.956.38l16.386 36.985v2.575l23.292.469zM60.634 50.898S31.256 85.894 28.915 88.469c-2.341 2.575-7.959 2.458-7.959 2.458l16.386-36.985v-2.575l23.292-.469zM17.562 42.047L5.156 28.471H1.059l6.204 15.566 10.299-1.99zM17.562 48.836L5.156 62.413H1.059l6.204-15.567 10.299 1.99z' fill='#1111B7'/><path d='M5.55 51.156l1.264-3.197 9.578 2.184-1.561 1.697-9.281-.684z' fill='#0C0C96'/><path d='M.708 45.793c0-3.476 23.695-6.32 26.335-6.32h46.934c2.639 0 14.981 2.844 14.981 6.32 0 3.476-12.342 6.32-14.981 6.32H27.043c-2.639 0-26.335-2.844-26.335-6.32z' fill='#4141E5'/><path d='M.708 45.793c0-3.476 23.695-6.32 26.335-6.32h46.934c2.639 0 14.981 2.844 14.981 6.32-15.566-3.511-72.332-2.926-88.25 0z' fill='#8484F4'/><path d='M39.822 28.413v-.994c0-1.197.994-1.941 2.698-2.32l3.456-.607h5.281c1.197 0 2.176.979 2.176 2.176v2.32a2.182 2.182 0 0 1-2.176 2.176h-5.092l-3.503-.714c-1.303-.286-2.84-.841-2.84-2.037zM31.685 16.177v-.797c0-.959.797-1.555 2.162-1.859l2.769-.487h4.232a1.75 1.75 0 0 1 1.744 1.743v1.859c0 .959-.785 1.743-1.744 1.743h-4.08l-2.807-.572c-1.044-.227-2.276-.671-2.276-1.63zM39.822 63.304v.994c0 1.197.994 1.941 2.698 2.32l3.456.607h5.281a2.182 2.182 0 0 0 2.176-2.176v-2.32a2.182 2.182 0 0 0-2.176-2.176h-5.092l-3.503.714c-1.303.285-2.84.84-2.84 2.037zM31.685 75.54v.797c0 .959.797 1.555 2.162 1.859l2.769.487h4.232a1.75 1.75 0 0 0 1.744-1.743v-1.859c0-.959-.785-1.743-1.744-1.743h-4.08l-2.807.572c-1.044.226-2.276.671-2.276 1.63z' fill='#0A0A7A'/><path d='M37.339 53.938v-1.814H59.55l-1.527 1.814H37.339z' fill='#0C0C96'/></g></svg>
+            </div>
+            <div class="icon-plane-text">Previous trips</div>
+         </div>
+
+        <div class="no-bookings" *ngIf="previousTrips.length === 0">You don't have any previous bookings</div> 
+
+        <div class="trips" *ngFor="let flight of previousTrips">
+            <div class="trips-header row">
+                <div class="col-md-3">
+                    <p class="trips-header-text">CONFIRMATION <br /> NUMBER</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">FROM - TO</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">GOING OUT</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-header-text text-down">LAST NAME</p>
+                </div>
+            </div>
+            <div class="trips-table row">
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{flight.confirmNumber}}</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text destination-text">
+                        {{flight.fromDestination}}
+                        <svg width='30' height='10' viewBox='0 0 33 12' xmlns='http://www.w3.org/2000/svg' fill='#06038d'><path d='M32.403 5.709l.005-.008-2.84-4.944a.568.568 0 0 0-.77-.195.548.548 0 0 0-.198.757l2.34 4.11H1.063a.557.557 0 0 0-.562.553c0 .306.252.553.562.553h29.879l-2.343 4.138a.549.549 0 0 0 .199.757.567.567 0 0 0 .77-.196l2.841-4.971a.544.544 0 0 0-.006-.554z' fill-rule='evenodd'/></svg>
+                        {{flight.toDestination}}
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{flight.takingOff}}</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="trips-table-text">{{lastName.toUpperCase()}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

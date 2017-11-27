@@ -1,0 +1,20 @@
+﻿<div class="container-info container-fluid">
+    <div class="header">INFORMATION PRICES & DISCOUNTS</div>
+    <div class="col-md-3 container-booking-inner">
+        <div class="list-header">TRAVEL INFORMATION</div>
+        <div style="margin-left: 1.5em;">
+            <p class="list-item active" (click)="addActiveClass(0); navigateToRoute('baggage');">Baggage</p>
+            <p class="list-item" (click)="addActiveClass(1); navigateToRoute('electronic-devices');">Electronic Devices On Board</p>
+            <p class="list-item" (click)="addActiveClass(2); navigateToRoute('special-assistance');">Special Assistance</p>
+        </div>
+
+        <div class="otherMainRoutes">
+            <p class="otherMainRoutes-item" (click)="navigateToOuterRoute('booking-info/how-to-book');">BOOKING INFORMATION</p>
+            <p class="otherMainRoutes-item" (click)="navigateToOuterRoute('prices-discounts/refunds-and-compensations');">PRICES & DISCOUNTS</p>
+        </div>
+    </div>
+    <div class="col-md-9 container-booking-inner">
+        <p class="active-root-header-text">{{activeRoute}}<p>
+        <router-outlet></router-outlet>
+    </div>
+</div>

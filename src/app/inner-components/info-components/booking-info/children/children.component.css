@@ -1,0 +1,57 @@
+.route-container {
+    padding: 15px 15px;
+    width: 90%;
+    margin: auto;
+    background: white;
+    box-shadow: 3px 3px 15px #888888
+}
+
+.route-img {
+    height: 110px;
+    width: 110px;
+    background-size: 110px 110px;
+    display: inline-block;
+    margin-top: 1em;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+
+.infant {  
+    background-image: url("./../../../../../assets/images/infant.png");
+}
+
+.y14 {  
+    background-image: url("./../../../../../assets/images/14y.png");
+}
+
+.y15 {  
+    background-image: url("./../../../../../assets/images/15y.png");
+}
+
+.y16 {  
+    background-image: url("./../../../../../assets/images/16y.png");
+}
+
+.route-text {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 230%;
+    font-weight: bold;
+    color: #06038D; 
+    text-align: center;
+}
+
+.route-text-small {
+    color: #849494;
+    font-weight: bold;
+    text-align: center;
+}
+
+.route-extra-text {
+    font-size: 145%;
+    margin-top: 4em;
+    margin-left: 1.5em;
+}
+
+

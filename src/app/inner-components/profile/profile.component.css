@@ -1,0 +1,135 @@
+@media (min-width: 1200px) {
+    .container-profile-outer {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 100px) {
+    .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+}
+
+.col-md-10 {
+    width: 100%;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-profile-outer {
+    margin-top: 5em
+}
+
+.header {
+    color: #06038D;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: p22-underground, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.header-name {
+    margin-left: 0.5em;
+}
+
+.sign-out {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    right: 10px;
+    position: relative;
+    width: 130px;
+}
+
+.sign-out-icon {
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+    background-image: url("./../../../assets/images/16y.png"); 
+    float: left; 
+}
+
+.sign-out-text {
+    color: #c6007e;
+    font-size: 16px;
+    float: left; 
+    position: relative;
+    top: 10px;
+    left: 8px;
+}
+
+.icon-plane {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.icon-plane-text {
+    font-size: 25px;
+    font-family: p22-underground, sans-serif;
+    color: #06038D;
+    font-weight: bold;
+}
+
+.no-bookings {
+    font-family: p22-underground, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.trips {
+    margin-top: 2em;
+    background: white;
+    box-shadow: 3px 3px 15px #888888;
+    border-radius: 5px;
+}
+
+.trips-header {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #e1e1e1;
+}
+
+.trips-header-text {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.text-down {
+    margin-top: 0.8em;
+}
+
+.trips-table {
+    width: 100%;
+    padding: 35px 10px;
+    text-align: center;
+}
+
+.trips-table-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.destination-text {
+    color: #06038D; 
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.profile-right {
+    background-color: red;
+}

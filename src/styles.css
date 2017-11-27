@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'p22-underground';
+    src: url(./assets/P22UndergroundCYPro-Thin.otf)
+}
+
+html, body {
+    font-family: Source Sans Pro,sans-serif;
+    background-color: #e5e5e5;
+    min-width: 550px;
+}
+
+html, body * {
+    font-size: 95%;
+}

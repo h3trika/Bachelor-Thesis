@@ -1,0 +1,69 @@
+@media (min-width: 1400px) {
+    .container-info {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        text-align: center;
+    }
+    .col-md-3 {
+        margin-left: 3.5em;
+    }
+}
+
+.container-info {
+    margin-top: 5em;
+}
+
+.container-booking-inner {
+    margin-top: 5em;
+}
+
+.header {
+    font-size: 250%;
+    color: #06038D;
+    margin-bottom: 1em;
+}
+
+.list-header {
+    font-size: 130%;
+    color: #06038D;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.list-item {
+    font-size: 115%;
+    color: #C6007E;;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active {
+    font-size: 125%;
+    color: #06038D;
+}
+
+.otherMainRoutes {
+    margin-top: 5em;
+    margin-left: 1.5em;
+}
+
+.otherMainRoutes-item {
+    font-size: 130%;
+    color: #C6007E;;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1.5em;
+}
+
+.active-root-header-text {
+    width: 90%;
+    margin: auto;
+    font-size: 180%;
+    color: #06038D;
+    margin-bottom: 1em;
+}
